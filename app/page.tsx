@@ -135,17 +135,18 @@ export default function Home() {
       </section>
 
       {/* Aims & Scope */}
-      <section className="py-32 bg-gradient-to-b from-[var(--navy)] via-[var(--teal)]/20 to-[var(--navy)] relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-gradient-to-b from-[var(--navy)] via-[var(--teal)]/20 to-[var(--navy)] relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, var(--purple) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="w-full max-w-7xl mx-auto px-4 relative z-10">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-center text-white mb-6"
           >
             Aims and Scope of the Conference
@@ -155,7 +156,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
             className="text-center mb-16"
           >
             <div className="inline-block h-1 w-24 bg-gradient-to-r from-transparent via-[var(--purple)] to-transparent" />
@@ -166,83 +167,65 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="mb-16 p-10 md:p-12 rounded-3xl bg-gradient-to-br from-[var(--blue)]/30 to-[var(--teal)]/20 backdrop-blur-xl border border-[var(--blue-light)]/40 shadow-2xl"
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="mb-12 md:mb-16 p-8 md:p-12 rounded-3xl bg-gradient-to-br from-[var(--blue)]/30 to-[var(--teal)]/20 backdrop-blur-xl border border-[var(--blue-light)]/40 shadow-2xl"
           >
             <div className="prose prose-lg prose-invert max-w-none">
-              <p className="text-[var(--gray-light)] text-lg leading-relaxed mb-6">
+              <p className="text-[var(--gray-light)] text-base md:text-lg leading-relaxed mb-6">
                 The Second International Scientific Conference <strong className="text-white font-semibold">Future-BME 2026</strong> (<em className="text-[var(--blue-light)]">Forging the Future: Business, Management and Economics Engineering in the Age of Sustainability and Digital Transformation</em>) builds upon the success of the inaugural 2024 edition, continuing to explore contemporary challenges and forward-looking solutions in business, management, and economics engineering.
               </p>
               
-              <p className="text-[var(--gray-light)] text-lg leading-relaxed mb-6">
+              <p className="text-[var(--gray-light)] text-base md:text-lg leading-relaxed mb-6">
                 In an era defined by sustainability imperatives and rapid digital transformation, organizations, economies, and societies face the dual challenge of achieving technological progress while maintaining environmental and social balance. The conference aims to foster interdisciplinary dialogue that connects theory and practice, encouraging innovative approaches that support both digital advancement and sustainable development.
               </p>
               
-              <p className="text-[var(--gray-light)] text-lg leading-relaxed mb-6">
+              <p className="text-[var(--gray-light)] text-base md:text-lg leading-relaxed mb-6">
                 The <strong className="text-white font-semibold">Future-BME Conference</strong> is hosted and organized by the <strong className="text-white font-semibold">Department of Industrial Engineering and Management</strong>, Faculty of Technical Sciences, University of Novi Sad. It is a biennial conference, and the Conference Proceedings are published every two years.
               </p>
               
-              <p className="text-[var(--gray-light)] text-lg leading-relaxed">
+              <p className="text-[var(--gray-light)] text-base md:text-lg leading-relaxed">
                 Manuscripts are welcomed from diverse disciplines, including but not limited to <strong className="text-white font-semibold">business, management, entrepreneurship, economics engineering, logistics, law, design, digital economy, sustainability studies, and related fields.</strong>
               </p>
             </div>
           </motion.div>
 
           {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="group p-8 rounded-2xl bg-[var(--blue)]/20 backdrop-blur-lg border border-[var(--blue-light)]/30 hover:border-[var(--purple)]/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(105,80,222,0.3)] hover:-translate-y-2"
-            >
-              <div className="w-14 h-14 bg-gradient-to-br from-[var(--purple)] to-[var(--blue-light)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="group p-6 md:p-8 rounded-2xl bg-[var(--blue)]/20 backdrop-blur-lg border border-[var(--blue-light)]/30 hover:border-[var(--purple)]/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(105,80,222,0.2)]">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[var(--purple)] to-[var(--blue-light)] rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[var(--purple)] transition-colors">Innovation</h3>
-              <p className="text-[var(--gray-light)] leading-relaxed">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-[var(--purple)] transition-colors">Innovation</h3>
+              <p className="text-[var(--gray-light)] text-sm md:text-base leading-relaxed">
                 Pioneering approaches in addressing emerging global challenges through sustainable and digitally transformed business practices.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="group p-8 rounded-2xl bg-[var(--blue)]/20 backdrop-blur-lg border border-[var(--blue-light)]/30 hover:border-[var(--purple)]/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(105,80,222,0.3)] hover:-translate-y-2"
-            >
-              <div className="w-14 h-14 bg-gradient-to-br from-[var(--purple)] to-[var(--blue-light)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group p-6 md:p-8 rounded-2xl bg-[var(--blue)]/20 backdrop-blur-lg border border-[var(--blue-light)]/30 hover:border-[var(--purple)]/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(105,80,222,0.2)]">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[var(--purple)] to-[var(--blue-light)] rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[var(--purple)] transition-colors">Collaboration</h3>
-              <p className="text-[var(--gray-light)] leading-relaxed">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-[var(--purple)] transition-colors">Collaboration</h3>
+              <p className="text-[var(--gray-light)] text-sm md:text-base leading-relaxed">
                 A platform for sharing innovative research, best practices, and insights among researchers, practitioners, and policymakers.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="group p-8 rounded-2xl bg-[var(--blue)]/20 backdrop-blur-lg border border-[var(--blue-light)]/30 hover:border-[var(--purple)]/60 transition-all duration-500 hover:shadow-[0_0_40px_rgba(105,80,222,0.3)] hover:-translate-y-2"
-            >
-              <div className="w-14 h-14 bg-gradient-to-br from-[var(--purple)] to-[var(--blue-light)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group p-6 md:p-8 rounded-2xl bg-[var(--blue)]/20 backdrop-blur-lg border border-[var(--blue-light)]/30 hover:border-[var(--purple)]/60 transition-all duration-300 hover:shadow-[0_0_30px_rgba(105,80,222,0.2)]">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[var(--purple)] to-[var(--blue-light)] rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[var(--purple)] transition-colors">Sustainability</h3>
-              <p className="text-[var(--gray-light)] leading-relaxed">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-[var(--purple)] transition-colors">Sustainability</h3>
+              <p className="text-[var(--gray-light)] text-sm md:text-base leading-relaxed">
                 Fostering interdisciplinary dialogue that connects theory and practice in the age of sustainability and digital transformation.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
