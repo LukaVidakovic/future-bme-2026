@@ -1,7 +1,6 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
 
 export default function Hero() {
@@ -23,13 +22,10 @@ export default function Hero() {
       {/* Header Image Section with Parallax */}
       <section ref={ref} className="relative w-full h-[40vh] md:h-[50vh] overflow-hidden">
         <motion.div style={{ y }} className="absolute inset-0">
-          <Image
-            src="/images/HeaderBME.jpg"
+          <img
+            src="/future-bme-2026/images/HeaderBME.jpg"
             alt="Future BME 2026"
-            fill
-            className="object-contain object-center"
-            priority
-            quality={100}
+            className="w-full h-full object-contain object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--navy)]/20 to-[var(--navy)]" />
         </motion.div>
@@ -140,7 +136,7 @@ export default function Hero() {
                 />
               </motion.a>
               <motion.a
-                href="/registration"
+                href="/future-bme-2026/registration"
                 whileHover={{ scale: 1.05, backgroundColor: 'rgba(105,80,222,0.2)' }}
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-4 bg-transparent border-2 border-[var(--purple)] text-white font-semibold rounded-full transition-all duration-300"

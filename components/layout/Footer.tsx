@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import StaticImage from '../StaticImage';
 
 export default function Footer() {
   return (
@@ -17,11 +17,9 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <Image
+              <StaticImage
                 src="/images/BMElogo.png"
                 alt="Future BME Logo"
-                width={200}
-                height={98}
                 className="h-12 md:h-14 w-auto mb-4 md:mb-6"
               />
               <div className="space-y-2 text-[var(--gray-light)] text-sm md:text-base">
@@ -100,11 +98,9 @@ export default function Footer() {
           viewport={{ once: true }}
           className="mb-8 md:mb-12 flex justify-center"
         >
-          <Image
+          <StaticImage
             src="/images/transparentlogobelitriinstitucije.png"
             alt="University Logos"
-            width={917}
-            height={285}
             className="h-16 md:h-20 w-auto opacity-80 hover:opacity-100 transition-opacity"
           />
         </motion.div>

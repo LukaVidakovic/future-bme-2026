@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import StaticImage from '../StaticImage';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,13 +42,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo - Left */}
           <Link href="/" className="flex-shrink-0 z-50 group">
-            <Image
+            <StaticImage
               src="/images/BMElogo.png"
               alt="Future BME Logo"
-              width={180}
-              height={88}
               className="h-11 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(105,80,222,0.5)]"
-              priority
             />
           </Link>
 

@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next build && touch out/.nojekyll",
-    "deploy": "npm run export && gh-pages -d out -t true"
+    "deploy": "npm run export && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
