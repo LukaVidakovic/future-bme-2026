@@ -325,17 +325,18 @@ export default function Home() {
               Join us as a sponsor and be part of shaping the future of business, management, and economics engineering
             </p>
             
-            <motion.a
-              href="/sponsors"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(71,118,135,0.6)' }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-3 px-12 py-5 bg-gradient-to-r from-[var(--blue)] to-[var(--blue-light)] text-white font-bold text-xl rounded-full shadow-lg transition-all duration-300"
-            >
-              <span>Become a Sponsor</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </motion.a>
+            <Link href="/sponsors">
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(71,118,135,0.6)' }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-3 px-12 py-5 bg-gradient-to-r from-[var(--blue)] to-[var(--blue-light)] text-white font-bold text-xl rounded-full shadow-lg transition-all duration-300 cursor-pointer"
+              >
+                <span>Become a Sponsor</span>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
       </section>
