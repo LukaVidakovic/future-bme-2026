@@ -130,8 +130,53 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 50%, var(--navy) 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  /* Animated gradient overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(105, 80, 222, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(71, 118, 135, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(43, 81, 101, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Subtle grid pattern */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(rgba(108, 149, 161, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(108, 149, 161, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Ensure content is above background */
+  #__next,
+  main,
+  header,
+  footer {
+    position: relative;
+    z-index: 1;
   }
   
   /* Smooth scrolling */
