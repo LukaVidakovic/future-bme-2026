@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Hero() {
   const ref = useRef(null);
@@ -140,14 +141,15 @@ export default function Hero() {
                   transition={{ duration: 0.6 }}
                 />
               </motion.a>
-              <motion.a
-                href="/registration"
-                whileHover={{ scale: 1.05, backgroundColor: 'rgba(105,80,222,0.2)' }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-transparent border-2 border-[var(--purple)] text-white font-semibold rounded-full transition-all duration-300"
-              >
-                Register Now
-              </motion.a>
+              <Link href="/registration">
+                <motion.div
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(105,80,222,0.2)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-10 py-4 bg-transparent border-2 border-[var(--purple)] text-white font-semibold rounded-full transition-all duration-300 cursor-pointer"
+                >
+                  Register Now
+                </motion.div>
+              </Link>
             </motion.div>
 
             {/* Conference Date Badge */}
