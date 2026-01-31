@@ -276,19 +276,19 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            className="fixed inset-0 z-[9999] flex items-start md:items-center justify-center p-4 pt-24 md:pt-4 bg-black/90 backdrop-blur-sm overflow-y-auto"
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative max-w-6xl max-h-[90vh]"
+              className="relative max-w-6xl max-h-[85vh] md:max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 w-10 h-10 rounded-full bg-[var(--purple)] hover:bg-[var(--purple)]/80 flex items-center justify-center"
+                className="absolute -top-14 md:-top-12 right-0 w-12 h-12 md:w-10 md:h-10 rounded-full bg-[var(--purple)] hover:bg-[var(--purple)]/80 flex items-center justify-center"
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -297,7 +297,7 @@ export default function GalleryPage() {
               <img
                 src={selectedImage}
                 alt="Conference"
-                className="max-w-full max-h-[90vh] rounded-2xl"
+                className="max-w-full max-h-[85vh] md:max-h-[90vh] rounded-2xl"
               />
             </motion.div>
           </motion.div>

@@ -343,7 +343,7 @@ export default function RegistrationPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pt-24 bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-[9999] flex items-start justify-center p-4 pt-24 md:pt-28 bg-black/80 backdrop-blur-sm overflow-y-auto"
             onClick={() => setIsModalOpen(false)}
           >
             <motion.div
