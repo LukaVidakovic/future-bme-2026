@@ -26,6 +26,7 @@ export default function Navbar() {
     { href: '/registration', label: 'Registration' },
     { href: '/ethics', label: 'Ethics' },
     { href: '/sponsors', label: 'Sponsors' },
+    { href: '/past-conferences/2024', label: 'Past Conferences' },
   ];
 
   return (
