@@ -236,7 +236,7 @@ export default function SubmissionsPage() {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="relative w-full max-w-4xl h-[90vh] bg-[var(--navy)] rounded-3xl shadow-2xl border border-[var(--purple)]/30 overflow-hidden"
+              className="relative w-full max-w-4xl h-[calc(95dvh-5rem)] bg-[var(--navy)] rounded-3xl shadow-2xl border border-[var(--purple)]/30 overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <button

@@ -233,33 +233,32 @@ export default function GalleryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.02, duration: 0.4 }}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group bg-[var(--navy)]/40 backdrop-blur-sm border border-white/5"
+                  className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group bg-[var(--navy)]/40 backdrop-blur-sm border border-white/5 active:scale-95 transition-transform"
                   onClick={() => setSelectedImage(img)}
                 >
                   <img
                     src={img}
                     alt={`Conference ${i + 1}`}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                    className="w-full h-full object-cover md:transition-all md:duration-500 md:group-hover:scale-110 md:group-hover:brightness-110"
                   />
                   
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--purple)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  {/* Gradient overlay - samo desktop */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--purple)]/80 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 transition-all duration-300 pointer-events-none" />
                   
-                  {/* Number badge */}
-                  <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-[var(--purple)]/80 backdrop-blur-xl flex items-center justify-center text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  {/* Number badge - samo desktop */}
+                  <div className="hidden md:flex absolute top-3 right-3 w-10 h-10 rounded-full bg-[var(--purple)]/80 backdrop-blur-xl items-center justify-center text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                     {i + 1}
                   </div>
                   
-                  {/* Expand icon */}
-                  <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/20 backdrop-blur-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  {/* Expand icon - samo desktop */}
+                  <div className="hidden md:flex absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/20 backdrop-blur-xl items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
                     </svg>
                   </div>
 
-                  {/* Shine effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {/* Shine effect - samo desktop */}
+                  <div className="hidden md:block absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   </div>
                 </motion.div>
