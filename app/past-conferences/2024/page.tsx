@@ -184,7 +184,7 @@ export default function PastConference2024() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.005 }}
                   whileHover={{ y: -4 }}
-                  className="relative z-10 block p-6 rounded-2xl bg-[var(--navy)]/40 backdrop-blur-xl border border-white/10 hover:border-[var(--purple)]/70 hover:bg-[var(--navy)]/60 transition-all duration-300 group"
+                  className="relative z-10 flex h-full p-6 rounded-2xl bg-[var(--navy)]/40 backdrop-blur-xl border border-white/10 hover:border-[var(--purple)]/70 hover:bg-[var(--navy)]/60 transition-all duration-300 group"
                 >
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
