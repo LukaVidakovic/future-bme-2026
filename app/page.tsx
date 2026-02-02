@@ -205,8 +205,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mb-20"
           >
-            <div className="inline-block px-4 py-2 bg-[var(--purple)]/20 rounded-full mb-6">
-              <span className="text-[var(--purple)] font-semibold text-sm uppercase tracking-wider">About the Conference</span>
+            <div className="inline-block px-6 py-2.5 bg-[var(--purple)] rounded-full mb-6 shadow-lg">
+              <span className="text-white font-semibold text-sm uppercase tracking-wider">About the Conference</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
