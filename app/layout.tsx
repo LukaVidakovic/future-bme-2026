@@ -75,11 +75,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/favicon2.png" },
-      { url: "/images/favicon.png", sizes: "any" }
+      { url: "/future-bme-2026/images/favicon2.png" },
+      { url: "/future-bme-2026/images/favicon.png", sizes: "any" }
     ],
     apple: [
-      { url: "/images/favicon2.png" }
+      { url: "/future-bme-2026/images/favicon2.png" }
     ],
   },
 };
