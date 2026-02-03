@@ -18,8 +18,10 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   useEffect(() => {
     if (isInView) {
       let start = 0;
-      const duration = 2000;
-      const increment = value / (duration / 16);
+      const duration = 1500; // Reduced from 2000ms
+      const steps = 30; // Reduced from ~125 steps
+      const increment = value / steps;
+      const stepDuration = duration / steps;
       
       const timer = setInterval(() => {
         start += increment;
@@ -29,7 +31,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
         } else {
           setCount(Math.floor(start));
         }
-      }, 16);
+      }, stepDuration);
 
       return () => clearInterval(timer);
     }
