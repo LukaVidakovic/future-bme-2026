@@ -104,6 +104,7 @@ const topics = [
       'Start-up Ecosystems and Scale-up Strategies',
       'Creative Industries, Branding, and Digital Marketing',
       'Strategic Management of Agritech Innovation',
+      'Architecture at the Intersection of Design, Technology and Entrepreneurship',
     ],
   },
   {
