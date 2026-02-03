@@ -14,12 +14,25 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect mobile
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   useEffect(() => {
     if (isInView) {
+      // On mobile, show final value immediately without animation
+      if (isMobile) {
+        setCount(value);
+        return;
+      }
+
+      // Desktop: smooth animation
       let start = 0;
-      const duration = 1500; // Reduced from 2000ms
-      const steps = 30; // Reduced from ~125 steps
+      const duration = 1500;
+      const steps = 30;
       const increment = value / steps;
       const stepDuration = duration / steps;
       
@@ -35,7 +48,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
       return () => clearInterval(timer);
     }
-  }, [isInView, value]);
+  }, [isInView, value, isMobile]);
 
   return (
     <span ref={ref}>
