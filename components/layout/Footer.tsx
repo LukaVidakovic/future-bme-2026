@@ -91,17 +91,26 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Institutional Logos */}
+        {/* Institutional Logos and Scopus Badge */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mb-8 md:mb-12 flex justify-center"
+          className="mb-8 md:mb-12 flex flex-col md:flex-row justify-between items-center gap-6"
         >
+          {/* University Logos - Left */}
           <StaticImage
             src="/images/transparentlogobelitriinstitucije.png"
             alt="University Logos"
             className="h-16 md:h-20 w-auto opacity-80 hover:opacity-100 transition-opacity"
+          />
+          
+          {/* Scopus Badge - Right */}
+          <motion.img
+            whileHover={{ scale: 1.05 }}
+            src="/future-bme-2026/images/ScopusBedge.png"
+            alt="Scopus Indexed Conference"
+            className="h-16 md:h-20 w-auto drop-shadow-xl"
           />
         </motion.div>
 

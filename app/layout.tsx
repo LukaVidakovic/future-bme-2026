@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/layout/BackToTop";
+import ScopusBadge from "@/components/layout/ScopusBadge";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -105,6 +106,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <BackToTop />
+        <ScopusBadge />
       </body>
     </html>
   );

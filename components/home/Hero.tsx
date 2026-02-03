@@ -157,11 +157,31 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="inline-block px-8 py-3 bg-[var(--blue)]/30 backdrop-blur-md border border-[var(--purple)]/50 rounded-full"
+              className="inline-block px-8 py-3 bg-[var(--blue)]/30 backdrop-blur-md border border-[var(--purple)]/50 rounded-full mb-12"
             >
               <p className="text-[var(--gray-light)]">
                 <span className="text-[var(--purple)] font-bold">September 29-30, 2026</span> • Fruške Terme, Serbia
               </p>
+            </motion.div>
+
+            {/* Scopus Badge - Emphasized */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="flex justify-center"
+            >
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="relative"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--purple)] to-[var(--blue)] rounded-full blur-2xl opacity-40 animate-pulse" />
+                <img
+                  src="/future-bme-2026/images/ScopusBedge.png"
+                  alt="Scopus Indexed Conference"
+                  className="relative w-40 md:w-56 h-auto drop-shadow-2xl"
+                />
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
