@@ -3,8 +3,32 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { papers2024, getFilename } from '@/lib/papers-data';
+import { useEffect, useState } from 'react';
 
 export default function PastConference2024() {
+  const [highlightedPaper, setHighlightedPaper] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Check for hash in URL
+    const hash = window.location.hash.replace('#paper-', '');
+    if (hash) {
+      setHighlightedPaper(hash);
+      
+      // Scroll to paper after a short delay
+      setTimeout(() => {
+        const element = document.getElementById(`paper-${hash}`);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500);
+
+      // Remove highlight after 3 seconds
+      setTimeout(() => {
+        setHighlightedPaper(null);
+      }, 3000);
+    }
+  }, []);
+
   return (
     <main className="min-h-screen pt-20">
       {/* Hero */}
@@ -176,6 +200,7 @@ export default function PastConference2024() {
                 )}
 
                 <motion.a
+                  id={`paper-${paper.id}`}
                   href={`/future-bme-2026/files/${getFilename(paper.id)}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -184,7 +209,11 @@ export default function PastConference2024() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.005 }}
                   whileHover={{ y: -4 }}
-                  className="relative z-10 flex h-full p-6 rounded-2xl bg-[var(--navy)]/40 backdrop-blur-xl border border-white/10 hover:border-[var(--purple)]/70 hover:bg-[var(--navy)]/60 transition-all duration-300 group"
+                  className={`relative z-10 flex h-full p-6 rounded-2xl backdrop-blur-xl border transition-all duration-300 group ${
+                    highlightedPaper === paper.id
+                      ? 'bg-[var(--purple)]/30 border-[var(--purple)] shadow-[0_0_30px_rgba(139,92,246,0.5)] animate-pulse'
+                      : 'bg-[var(--navy)]/40 border-white/10 hover:border-[var(--purple)]/70 hover:bg-[var(--navy)]/60'
+                  }`}
                 >
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
