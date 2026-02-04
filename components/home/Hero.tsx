@@ -157,11 +157,32 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="inline-block px-8 py-3 bg-[var(--blue)]/30 backdrop-blur-md border border-[var(--purple)]/50 rounded-full mb-12"
+              className="inline-block mb-12"
             >
-              <p className="text-[var(--gray-light)]">
-                <span className="text-[var(--purple)] font-bold">September 29-30, 2026</span> • Fruške Terme, Serbia
-              </p>
+              <Link href="/event-info">
+                <motion.div
+                  whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(105,80,222,0.6)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-10 py-5 bg-gradient-to-r from-[var(--purple)]/90 to-[var(--blue)]/90 backdrop-blur-xl border-2 border-white/30 hover:border-white/60 rounded-2xl transition-all duration-300 cursor-pointer shadow-2xl"
+                >
+                  <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                    <div className="flex items-center gap-2">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <span className="text-white font-bold text-2xl md:text-3xl">September 29-30, 2026</span>
+                    </div>
+                    <span className="hidden md:inline text-white/60 text-2xl">•</span>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span className="text-white/90 font-semibold text-lg md:text-xl">Fruške Terme, Serbia</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
             </motion.div>
 
             {/* Scopus Badge - Emphasized */}
