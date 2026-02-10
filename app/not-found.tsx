@@ -39,7 +39,7 @@ export default function NotFound() {
           }}
         >
           <img 
-            src="/future-bme-2026/images/BMElogo.png" 
+            src="/images/BMElogo.png" 
             alt="BME Logo"
             className="w-full h-full object-contain"
           />

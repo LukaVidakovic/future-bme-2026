@@ -67,7 +67,7 @@ export default function Home() {
               </p>
               
               <motion.a
-                href="/future-bme-2026/files/FUTURE-BME_2026_CONFERENCE_INVITATION.pdf"
+                href="/files/FUTURE-BME_2026_CONFERENCE_INVITATION.pdf"
                 target="_blank"
                 whileHover={{ x: 10 }}
                 className="inline-flex items-center gap-3 text-[var(--purple)] hover:text-white font-bold text-lg group transition-colors"

@@ -105,14 +105,14 @@ export default function EthicsPage() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="/future-bme-2026/files/AUTHORSSTATEMENT-FUTURE-BME2024.pdf"
+              href="/files/AUTHORSSTATEMENT-FUTURE-BME2024.pdf"
               target="_blank"
               className="px-8 py-4 bg-gradient-to-r from-[var(--purple)] to-[var(--blue-light)] text-white font-bold rounded-xl hover:shadow-lg transition-all text-center"
             >
               📄 Author's Statement (Download)
             </a>
             <a
-              href="/future-bme-2026/files/LicenseAgreement-FUTURE-BME2024.pdf"
+              href="/files/LicenseAgreement-FUTURE-BME2024.pdf"
               target="_blank"
               className="px-8 py-4 bg-gradient-to-r from-[var(--blue)] to-[var(--teal)] text-white font-bold rounded-xl hover:shadow-lg transition-all text-center"
             >

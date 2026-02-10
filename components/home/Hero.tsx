@@ -24,7 +24,7 @@ export default function Hero() {
       <section ref={ref} className="relative w-full h-[40vh] md:h-[50vh] overflow-hidden">
         <motion.div style={{ y }} className="absolute inset-0">
           <img
-            src="/future-bme-2026/images/HeaderBME.jpg"
+            src="/images/HeaderBME.jpg"
             alt="Future BME 2026"
             className="w-full h-full object-contain object-center"
           />
@@ -198,7 +198,7 @@ export default function Hero() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[var(--purple)] to-[var(--blue)] rounded-full blur-2xl opacity-40 animate-pulse" />
                 <img
-                  src="/future-bme-2026/images/ScopusBedge.png"
+                  src="/images/ScopusBedge.png"
                   alt="Scopus Indexed Conference"
                   className="relative w-40 md:w-56 h-auto drop-shadow-2xl"
                 />

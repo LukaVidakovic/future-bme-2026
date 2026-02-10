@@ -55,27 +55,27 @@ export default function Navbar() {
         />
       </div>
 
-      <div className="w-full px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+      <div className="w-full px-4 lg:px-8">
+        <div className="flex items-center justify-between h-20 gap-4">
           {/* Logo - Left */}
           <Link href="/" className="flex-shrink-0 z-50 group">
             <StaticImage
               src="/images/BMElogo.png"
               alt="Future BME Logo"
-              className="h-11 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(105,80,222,0.5)]"
+              className="h-10 md:h-11 w-auto transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(105,80,222,0.5)]"
             />
           </Link>
 
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
-            <div className="flex items-center gap-2">
+          {/* Desktop Navigation - Center */}
+          <div className="hidden lg:flex flex-1 justify-center max-w-4xl mx-auto">
+            <div className="flex items-center gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className="relative group"
                 >
-                  <div className="px-5 py-2.5 text-sm font-semibold text-[var(--gray-light)] hover:text-white transition-all duration-300 whitespace-nowrap">
+                  <div className="px-3 py-2.5 text-xs xl:text-sm font-semibold text-[var(--gray-light)] hover:text-white transition-all duration-300 whitespace-nowrap">
                     {link.label}
                   </div>
                   <motion.div
@@ -88,13 +88,13 @@ export default function Navbar() {
           </div>
 
           {/* Right Side - Search + CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
             <SearchBar />
             <Link
               href="/registration"
-              className="px-6 py-2.5 bg-gradient-to-r from-[var(--purple)] to-[var(--blue-light)] text-white text-sm font-bold rounded-full hover:shadow-[0_0_25px_rgba(105,80,222,0.6)] transition-all duration-300 hover:scale-105"
+              className="px-4 xl:px-6 py-2.5 bg-gradient-to-r from-[var(--purple)] to-[var(--blue-light)] text-white text-xs xl:text-sm font-bold rounded-full hover:shadow-[0_0_25px_rgba(105,80,222,0.6)] transition-all duration-300 hover:scale-105 whitespace-nowrap"
             >
-              Register Now
+              Register
             </Link>
           </div>
 

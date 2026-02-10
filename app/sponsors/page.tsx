@@ -136,7 +136,7 @@ export default function SponsorsPage() {
                   }}
                 >
                   <img 
-                    src="/future-bme-2026/images/BMElogo.png" 
+                    src="/images/BMElogo.png" 
                     alt="BME Logo Watermark"
                     className="w-full h-full object-contain"
                   />

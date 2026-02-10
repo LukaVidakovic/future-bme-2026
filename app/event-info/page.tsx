@@ -115,7 +115,7 @@ export default function EventInfoPage() {
               <p className="text-white/90 leading-relaxed">
                 <strong className="text-white">Accommodation Discount:</strong> Please fill out{' '}
                 <a 
-                  href="/future-bme-2026/files/Future_BME_2026-Movenpick_Fruske_Terme_Hotel.docx"
+                  href="/files/Future_BME_2026-Movenpick_Fruske_Terme_Hotel.docx"
                   className="text-[var(--purple)] hover:text-white font-semibold transition-colors underline"
                 >
                   this document

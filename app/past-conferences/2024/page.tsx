@@ -109,13 +109,13 @@ export default function PastConference2024() {
               Click on the image to download Future BME 2024 Conference Proceedings
             </p>
             <a
-              href="https://www.future-bme.ftn.uns.ac.rs/FUTURE-BME_2024_FINAL_PROCEEDINGS.pdf"
+              href="/files/FUTURE-BME_2024_FINAL_PROCEEDINGS.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
               <motion.img
-                src="/future-bme-2026/images/BMEPROCEEDINGS.png"
+                src="/images/BMEPROCEEDINGS.png"
                 alt="Proceedings"
                 whileHover={{ scale: 1.05 }}
                 className="max-w-xs mx-auto rounded-2xl shadow-2xl cursor-pointer border-4 border-[var(--purple)]/50 hover:border-[var(--purple)] transition-all"
@@ -158,7 +158,7 @@ export default function PastConference2024() {
                     }}
                   >
                     <img 
-                      src="/future-bme-2026/images/BMElogo.png" 
+                      src="/images/BMElogo.png" 
                       alt="BME Logo Watermark"
                       className="w-full h-full object-contain"
                     />
@@ -175,7 +175,7 @@ export default function PastConference2024() {
                     }}
                   >
                     <img 
-                      src="/future-bme-2026/images/BMElogo.png" 
+                      src="/images/BMElogo.png" 
                       alt="BME Logo Watermark"
                       className="w-full h-full object-contain"
                     />
@@ -192,7 +192,7 @@ export default function PastConference2024() {
                     }}
                   >
                     <img 
-                      src="/future-bme-2026/images/BMElogo.png" 
+                      src="/images/BMElogo.png" 
                       alt="BME Logo Watermark"
                       className="w-full h-full object-contain"
                     />
@@ -201,7 +201,7 @@ export default function PastConference2024() {
 
                 <motion.a
                   id={`paper-${paper.id}`}
-                  href={`/future-bme-2026/files/${getFilename(paper.id)}`}
+                  href={`/files/${getFilename(paper.id)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}

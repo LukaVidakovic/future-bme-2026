@@ -33,7 +33,7 @@ export default function ScopusBadge() {
               {/* Badge */}
               <motion.img
                 whileHover={{ scale: 1.05 }}
-                src="/future-bme-2026/images/ScopusBedge.png"
+                src="/images/ScopusBedge.png"
                 alt="Scopus Indexed"
                 className="w-24 md:w-40 h-auto drop-shadow-2xl pointer-events-none"
               />

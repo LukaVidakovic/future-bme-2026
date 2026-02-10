@@ -55,7 +55,7 @@ export default function SubmissionsPage() {
             
             <div className="mb-8">
               <a
-                href="/future-bme-2026/files/Template_Future_BME_2026.docx"
+                href="/files/Template_Future_BME_2026.docx"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[var(--purple)] to-[var(--blue-light)] text-white font-bold rounded-xl hover:shadow-lg transition-all"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

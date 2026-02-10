@@ -6,7 +6,8 @@ interface StaticImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export default function StaticImage({ src, alt, className, ...props }: StaticImageProps) {
-  const imageSrc = src.startsWith('/') ? `/future-bme-2026${src}` : src;
+  // No basePath prefix - images are now relative
+  const imageSrc = src;
   
   return (
     <img

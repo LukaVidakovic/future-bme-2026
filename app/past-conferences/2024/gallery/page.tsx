@@ -46,7 +46,7 @@ const images = [
   '_IMG_6574.jpg', '_IMG_6579.jpg', '_IMG_6581.jpg', '_IMG_6582.jpg', '_IMG_6587.jpg',
   '_IMG_6590.jpg', '_IMG_6594.jpg', '_IMG_6599.jpg', '_IMG_6601.jpg', '_IMG_6602.jpg',
   '_IMG_6604.jpg', '_IMG_6607.jpg', '_IMG_6608.jpg'
-].map(img => `/future-bme-2026/images/${img}`);
+].map(img => `/images/${img}`);
 
 export default function GalleryPage() {
   const [mode, setMode] = useState<'carousel' | 'grid'>('carousel');

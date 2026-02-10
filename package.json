@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:github": "cp .env.github .env.local && next build && touch out/.nojekyll",
+    "build:server": "cp .env.server .env.local && next build",
     "start": "next start",
     "lint": "eslint",
     "export": "next build && touch out/.nojekyll",
-    "deploy": "npm run export && gh-pages -d out --dotfiles"
+    "deploy": "npm run build:github && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

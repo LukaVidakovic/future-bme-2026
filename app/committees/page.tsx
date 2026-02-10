@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const conferenceChair = {
   name: 'Prof. Andrea Ivanišević',
   affiliation: 'Faculty of Technical Sciences, University of Novi Sad, Serbia',
-  image: '/future-bme-2026/images/A.Ivanisevic.jpg'
+  image: '/images/A.Ivanisevic.jpg'
 };
 
 const programCommittee = [

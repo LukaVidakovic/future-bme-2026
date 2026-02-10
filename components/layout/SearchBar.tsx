@@ -99,7 +99,6 @@ export default function SearchBar() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
         <span className="text-sm">Search</span>
-        <kbd className="hidden xl:inline-block px-2 py-0.5 text-xs bg-[var(--purple)]/20 rounded">⌘K</kbd>
       </button>
 
       {/* Mobile Search Icon */}
@@ -132,6 +131,21 @@ export default function SearchBar() {
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               className="fixed top-24 left-1/2 -translate-x-1/2 w-full max-w-2xl z-[101] px-4"
             >
+              {/* Close Button - Outside Modal */}
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  setQuery('');
+                  setResults([]);
+                }}
+                className="absolute -top-12 right-4 p-2 bg-[var(--navy)]/80 hover:bg-[var(--navy)] text-[var(--gray-light)] hover:text-white border border-[var(--purple)]/30 rounded-lg transition-all backdrop-blur-sm"
+                aria-label="Close search"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
               <div className="bg-[var(--navy)] border border-[var(--purple)]/30 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Search Input */}
                 <div className="flex items-center gap-3 px-6 py-4 border-b border-[var(--purple)]/20">

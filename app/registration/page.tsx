@@ -304,7 +304,7 @@ export default function RegistrationPage() {
                   <strong className="text-white">NOTE:</strong> Please enter the conference name (FUTURE-BME 2026) and pro-invoice number in payment details. All transaction charges shall be borne by the payer.
                 </p>
                 <a
-                  href="/future-bme-2026/files/INSTRUCTIONFOREURPAYMENTS.pdf"
+                  href="/files/INSTRUCTIONFOREURPAYMENTS.pdf"
                   target="_blank"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[var(--purple)] to-[var(--blue-light)] text-white font-bold rounded-xl hover:shadow-lg transition-all text-sm"
                 >
@@ -321,7 +321,7 @@ export default function RegistrationPage() {
                   For payments in Serbian Dinars (RSD), please follow the instructions in the document below.
                 </p>
                 <a
-                  href="/future-bme-2026/files/InstrukcijezadinarskoplaanjeFUTURE-BME2026.pdf"
+                  href="/files/InstrukcijezadinarskoplaanjeFUTURE-BME2026.pdf"
                   target="_blank"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[var(--blue)] to-[var(--teal)] text-white font-bold rounded-xl hover:shadow-lg transition-all text-sm"
                 >

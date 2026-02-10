@@ -108,7 +108,7 @@ export default function Footer() {
           {/* Scopus Badge - Right */}
           <motion.img
             whileHover={{ scale: 1.05 }}
-            src="/future-bme-2026/images/ScopusBedge.png"
+            src="/images/ScopusBedge.png"
             alt="Scopus Indexed Conference"
             className="h-16 md:h-20 w-auto drop-shadow-xl"
           />
