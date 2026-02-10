@@ -18,11 +18,10 @@ Options -Indexes +FollowSymLinks
     # RewriteCond %{HTTPS} off
     # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-    # Remove trailing slash (301 redirect)
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^(.+)/$ /$1 [R=301,L]
+    # Serve index.html from folders (Next.js static export with trailingSlash)
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_FILENAME}/index.html -f
+    RewriteRule ^(.+)$ $1/index.html [L]
 
     # Serve .html files for clean URLs (internal rewrite, no redirect)
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -33,30 +32,30 @@ Options -Indexes +FollowSymLinks
     # ============================================
     # SEO MIGRATION - Old HTML pages to new routes
     # ============================================
-    # Main pages
-    RewriteRule ^Submissions\.html$ /submissions [R=301,L,NC]
-    RewriteRule ^submissions\.html$ /submissions [R=301,L,NC]
-    RewriteRule ^Committees\.html$ /committees [R=301,L,NC]
-    RewriteRule ^committees\.html$ /committees [R=301,L,NC]
-    RewriteRule ^Registration\.html$ /registration [R=301,L,NC]
-    RewriteRule ^registration\.html$ /registration [R=301,L,NC]
-    RewriteRule ^Topics\.html$ /topics [R=301,L,NC]
-    RewriteRule ^topics\.html$ /topics [R=301,L,NC]
-    RewriteRule ^Event-Info\.html$ /event-info [R=301,L,NC]
-    RewriteRule ^event-info\.html$ /event-info [R=301,L,NC]
-    RewriteRule ^Sponsors\.html$ /sponsors [R=301,L,NC]
-    RewriteRule ^sponsors\.html$ /sponsors [R=301,L,NC]
-    RewriteRule ^Ethics\.html$ /ethics [R=301,L,NC]
-    RewriteRule ^ethics\.html$ /ethics [R=301,L,NC]
+    # Main pages (redirect to trailing slash versions)
+    RewriteRule ^Submissions\.html$ /submissions/ [R=301,L,NC]
+    RewriteRule ^submissions\.html$ /submissions/ [R=301,L,NC]
+    RewriteRule ^Committees\.html$ /committees/ [R=301,L,NC]
+    RewriteRule ^committees\.html$ /committees/ [R=301,L,NC]
+    RewriteRule ^Registration\.html$ /registration/ [R=301,L,NC]
+    RewriteRule ^registration\.html$ /registration/ [R=301,L,NC]
+    RewriteRule ^Topics\.html$ /topics/ [R=301,L,NC]
+    RewriteRule ^topics\.html$ /topics/ [R=301,L,NC]
+    RewriteRule ^Event-Info\.html$ /event-info/ [R=301,L,NC]
+    RewriteRule ^event-info\.html$ /event-info/ [R=301,L,NC]
+    RewriteRule ^Sponsors\.html$ /sponsors/ [R=301,L,NC]
+    RewriteRule ^sponsors\.html$ /sponsors/ [R=301,L,NC]
+    RewriteRule ^Ethics\.html$ /ethics/ [R=301,L,NC]
+    RewriteRule ^ethics\.html$ /ethics/ [R=301,L,NC]
     
     # Home pages
     RewriteRule ^index\.html$ / [R=301,L,NC]
     RewriteRule ^home\.html$ / [R=301,L,NC]
     RewriteRule ^Home\.html$ / [R=301,L,NC]
     
-    # Past conferences
-    RewriteRule ^past-conferences/2024\.html$ /past-conferences/2024 [R=301,L,NC]
-    RewriteRule ^past-conferences/2024/gallery\.html$ /past-conferences/2024/gallery [R=301,L,NC]
+    # Past conferences (redirect to trailing slash versions)
+    RewriteRule ^past-conferences/2024\.html$ /past-conferences/2024/ [R=301,L,NC]
+    RewriteRule ^past-conferences/2024/gallery\.html$ /past-conferences/2024/gallery/ [R=301,L,NC]
 
 </IfModule>
 

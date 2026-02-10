@@ -2,6 +2,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const nextConfig = {
   output: 'export',
+  trailingSlash: true, // ⬅️ BITNO za Apache server
   images: {
     unoptimized: true,
   },
